@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/item_border"
+    android:elevation="10dp">
+
+    <!-- Conteneur des informations (Colonne de gauche) -->
+    <LinearLayout
+        android:id="@+id/leftColumn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rightColumn"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtTypeSoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Soins Ambulatoire"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtTransactionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N° Transaction :"
+            />
+        <TextView
+            android:id="@+id/txtSecurite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="N° Securite :"
+            />
+
+        <TextView
+            android:id="@+id/txtFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom :"/>
+
+        <TextView
+            android:id="@+id/dateNaiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date naissance :"/>
+        <TextView
+            android:id="@+id/txtEtablissement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Etablissement :"/>
+        <TextView
+            android:id="@+id/txtDateSoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de soins :"/>
+    </LinearLayout>
+
+    <!-- Colonne de droite contenant le bouton et le statut -->
+    <LinearLayout
+        android:id="@+id/rightColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Bouton Action -->
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:minHeight="0dp"
+            android:padding="12dp"
+            android:text="Imprimer"
+            android:layout_marginBottom="12dp"/>
+        <Button
+            android:id="@+id/btnFinalisation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="12sp"
+            android:minHeight="0dp"
+            android:visibility="gone"
+            android:padding="12dp"
+            android:text="Continuer"/>
+
+        <!-- Statut (Sous le bouton) -->
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statut : En attente"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

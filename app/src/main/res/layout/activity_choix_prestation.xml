@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="1dp"
+    tools:context=".views.ChoixPrestationActivity">
+
+
+
+    <Button
+        android:id="@+id/retourHome"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="&lt;"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titrePage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Choix du bon de prise en charge"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/retourHome"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/titrePage">
+
+        <Button
+            android:id="@+id/soinAmbulatoires"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Soins ambulatoires - Consultation et  Médicaments"
+            android:layout_marginTop="16dp"
+            />
+
+        <Button
+            android:id="@+id/protheseDentaire"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="16dp"
+            android:text="Bon de soins dentaire"
+             />
+
+        <Button
+            android:id="@+id/bioImagerie"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Biologie - Imagerie et Autre"
+            android:layout_marginTop="16dp"
+
+            />
+
+
+
+        <Button
+            android:id="@+id/hospitalisation"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Hospitalisation et Soins"
+            android:layout_marginTop="16dp"
+            android:enabled="false"
+            android:alpha="0.5" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

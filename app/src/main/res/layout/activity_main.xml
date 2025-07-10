@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Titre de la base de données - Hauteur réduite -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:padding="4dp">
+
+            <!-- Information de la base de données -->
+            <TextView
+                android:id="@+id/tvDatabaseInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Information base de données" />
+
+            <!-- Information de l'agent -->
+            <!--<TextView
+                android:id="@+id/tvAgentInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                android:text="Agent: Non connecté" />-->
+            <!-- Photo de l'agent en cercle cliquable -->
+            <FrameLayout
+                android:id="@+id/flAgentPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/circle_background_profil"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/ivAgentPhoto"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person_default"
+                    android:background="@drawable/circle_image_background"
+                    android:clipToOutline="true"/>
+
+                <!-- Indicateur de statut (petit point vert/rouge) -->
+                <View
+                    android:id="@+id/vStatusIndicator"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/status_indicator_green" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Zone 1: Mode connecté - Hauteur réduite -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:orientation="vertical"
+            android:background="@color/green"
+            android:layout_margin="3dp">
+
+            <TextView
+                android:id="@+id/titreZone1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="Mode connecté" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Rangée 1: Nouvelle et Ancienne carte -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <!-- Nouvelle carte -->
+                        <RelativeLayout
+                            android:id="@+id/btnVersAppNewDroits"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_shape_round">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/logo_newcardmu"
+                                    android:layout_width="60dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/newcardcmu" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nouvelle carte"
+                                    android:textColor="#000000"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Ancienne carte -->
+                        <RelativeLayout
+                            android:id="@+id/btnVersAppOldDroits"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_shape_round">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/logo_oldcardmu"
+                                    android:layout_width="60dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/oldcardcmu" />
+
+                                <TextView
+                                    android:text="Ancienne carte"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/black"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <!-- Rangée 2: Recherche biométrique et Accès par e-card -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <!-- Recherche biométrique -->
+                        <RelativeLayout
+                            android:id="@+id/btnVersAppEmpreintes"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_shape_round">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/logo_empreinte"
+                                    android:layout_width="60dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/logo_empreinte" />
+
+                                <TextView
+                                    android:id="@+id/textBtnEmpreinte"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Recherche biométrique"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <!-- Accès par e-card -->
+                        <RelativeLayout
+                            android:id="@+id/btnVersAppEcard"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_shape_round">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/logoaccesecard"
+                                    android:layout_width="60dp"
+                                    android:layout_height="35dp"
+                                    android:src="@drawable/logo_ecard" />
+
+                                <TextView
+                                    android:text="Accès par e-card"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Zone 2: Tous les modes - hauteur ajustée -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="35"
+            android:orientation="vertical"
+            android:background="#00A5EA"
+            android:layout_margin="3dp">
+
+            <TextView
+                android:id="@+id/titreZone2"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="@string/touslesmodes" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Recherche biographique -->
+                    <Button
+                        android:id="@+id/btnVersActRechEnrole"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/serchp"
+                        android:text="RECHERCHE BIOGRAPHIQUE"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+
+                    <!-- Scanner QR code -->
+                    <Button
+                        android:id="@+id/btnVersActScanqrcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/qr"
+                        android:text="SCANNER UN QR CODE"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+
+                    <!-- Saisir numéro sécurité sociale -->
+                    <Button
+                        android:id="@+id/btnVersActNumsecu"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/card"
+                        android:text="SAISIR NUMERO DE SECURITE SOCIALE"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Zone 3: Zone du bas - hauteur optimisée -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="30"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_margin="3dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Scanner FSP -->
+                    <Button
+                        android:id="@+id/btnVersActScanFSEpapier"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/scan"
+                        android:text="SCANNER UNE FSP"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+
+                    <!-- Liste FSE -->
+                    <Button
+                        android:id="@+id/btnVerslistfse"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/checklist"
+                        android:text="Liste FSE"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+
+                    <!-- Synchronisation des données -->
+                    <Button
+                        android:id="@+id/btnSynchro"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/synchro"
+                        android:text="Synchronisation des données"
+                        android:textColor="#000000"
+                        android:textSize="10sp"
+                        android:gravity="left|center_vertical"
+                        android:drawablePadding="8dp"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="8dp"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/button_background"
+                        android:elevation="2dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

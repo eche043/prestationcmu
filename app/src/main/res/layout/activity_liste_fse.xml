@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Barre de boutons -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="0dp">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Liste des FSE"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnFragment1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/scrollbutton_background"
+                android:textColor="@android:color/black"
+                android:text="Toutes"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:layout_marginHorizontal="1dp"/>
+
+            <Button
+                android:id="@+id/btnFragment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Finalisés"
+                android:textColor="@android:color/black"
+                android:background="@drawable/scrollbutton_background"
+                />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:layout_marginHorizontal="1dp"/>
+
+            <Button
+                android:id="@+id/btnFragment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:background="@drawable/scrollbutton_background"
+                android:text="Non Finalisés" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:layout_marginHorizontal="1dp"/>
+            <Button
+                android:id="@+id/btnFragment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:background="@drawable/scrollbutton_background"
+                android:text="Entente Prealable" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:layout_marginHorizontal="1dp"/>
+            <Button
+                android:id="@+id/btnFragment5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:background="@drawable/scrollbutton_background"
+                android:text="Autre Fsp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE"/>
+</LinearLayout>

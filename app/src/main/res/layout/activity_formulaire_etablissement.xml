@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.FormulaireEtablissementActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/layoutTitrePage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Formulaire de l'etablissement"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+
+            <TextView
+                android:id="@+id/textIdentCentre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#08a1e1"
+                android:padding="8dp"
+                android:text="PRENDRE LES PHOTOS DE L'AVANT DE L'INTERIEUR DU CENTRE"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:id="@+id/layoutPhotoFse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:weightSum="2">
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewEtablisementFacade"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_grey"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Photo devant l'établissement" />
+
+                    <ImageButton
+                        android:id="@+id/btnCaptureFacadeAvant"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_add"
+                        android:contentDescription="Prendre la photo"
+                        android:elevation="4dp"
+                        android:padding="5dp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewEtablissementInterieur"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_grey"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Photo à l'intérieur de l'établissement" />
+
+                    <ImageButton
+                        android:id="@+id/btnCaptureIntereieurEtablissement"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_add"
+                        android:contentDescription="Prendre photo 2"
+                        android:elevation="4dp"
+                        android:padding="5dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Identité de l'agent -->
+            <TextView
+                android:id="@+id/textIdentAgent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#08a1e1"
+                android:padding="8dp"
+                android:text="IDENTIFICATION DE L'AGENT"
+                android:textColor="#FFFFFF" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nomEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nom"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/prenomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/prenomEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Prénom"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/contactLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/contactEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contact"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etablissementLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etablissementEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nom de l'établissement"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Suivant" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.FseEditActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/retourHome"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/zxing_transparent"
+                android:text="&lt;"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titrePage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Edition d'une nouvelle FSE"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/retourHome"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/titrePage">
+
+                <TextView
+                    android:id="@+id/textIdentFseSoins"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="IDENTIFICATION DE LA FEUILLE DE SOINS"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textNumeros"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="N° FSE initiale"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champFseInitial"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Numéro de fse initial "
+                    android:padding="8dp"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/textNumero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="N° de transaction"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Entrez le numéro de transaction"
+                    android:padding="8dp"
+                    android:textColor="#000000"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/textIdentAssure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="IDENTIFICATION DE L'ASSURE"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N° de sécurité sociale"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champNumSecu"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le numero de securité social"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GUID"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champGuid"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le guid"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nom complet"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champNomComplet"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le nom complet"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date de naissance"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champDateNaiss"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez la date de naissance"
+                            android:padding="8dp"
+                            android:textColor="#000000"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Sexe"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/champSexe"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:drawable/btn_dropdown" />
+
+                <TextView
+                    android:id="@+id/textStatutEtablissement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="STATUT DE L'ETABLISSEMENT D'ACCUEIL"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textNomEtablissement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Nom etablissement"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champNomEtablissement"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Entrez le nom de l'etablissement"
+                    android:padding="8dp"
+                    android:textSize="12dp" />
+
+                <!-- Section des actes médicaux -->
+                <TextView
+                    android:id="@+id/textInfoActeMedicaux"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="3. Codes d'actes médicaux"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:id="@+id/layoutActes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <!-- Premier acte -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteCodeActe1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:hint="Code acte"
+                            android:padding="12dp"
+                            android:completionThreshold="1"
+                            android:background="@android:drawable/editbox_background" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/designationActe1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Désignation"
+                            android:padding="12dp"
+                            android:completionThreshold="1"
+                            android:background="@android:drawable/editbox_background" />
+
+                        <EditText
+                            android:id="@+id/quantiteActe1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:hint="Quantité"
+                            android:padding="12dp"
+                            android:inputType="number"
+                            android:background="@android:drawable/editbox_background"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/containerAdditionalActes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btnAddActe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="8dp"
+                        android:text="+ Ajouter un acte"
+                        android:background="@android:color/transparent"
+                        android:textColor="#08a1e1"/>
+                </LinearLayout>
+
+                <!-- Options (remplacement des CheckBox) -->
+                <RadioGroup
+                    android:id="@+id/radioGroupOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioCMR"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CMR" />
+
+                    <RadioButton
+                        android:id="@+id/radioEloignement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Eloignement" />
+
+                    <RadioButton
+                        android:id="@+id/radioUrgent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Urgent" />
+
+                    <RadioButton
+                        android:id="@+id/radioReference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Référence" />
+
+                    <RadioButton
+                        android:id="@+id/radioAutre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Autre" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/champAutre"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Précisez"
+                    android:padding="8dp"/>
+
+                <!-- Section des montants -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!-- Total -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/champTotal"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Montant total"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textSize="12sp"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                    <!-- Part CMU -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Part CMU"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/champPartCMU"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Part CMU"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textSize="12sp"
+                            android:enabled="false"/>
+                    </LinearLayout>
+
+                    <!-- Part Assuré -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="4dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Part Assuré"
+                            android:textSize="14sp"/>
+
+                        <EditText
+                            android:id="@+id/champPartAssure"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="4dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Part assuré"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textSize="12sp"
+                            android:enabled="false"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#e7000b"
+                    android:padding="8dp"
+                    android:text="Vous devrez finaliser la FSE après la prise en charge de l'assuré"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/enregistrerFiche"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_background"
+                    android:text="Generer une feuille de soins"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

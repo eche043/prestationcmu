@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.NumSecuSaisieActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutTitrePageSearchEnrole"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="3dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/titrePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Rechercher à partir d'un numéro de sécurité sociale"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textPhotoFSe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#08a1e1"
+            android:padding="8dp"
+            android:text="Entrez le numéro de sécurité ou matricule planteur"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/formLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutTitrePageSearchEnrole">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/champNumeroSecu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Numéro de sécurité sociale" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!-- Texte "OU" ajouté ici -->
+        <TextView
+            android:id="@+id/textOu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="OU"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/champMatriculePlanteur"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Matricule du planteur" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/textPhotoFSePlanteur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#08a1e1"
+            android:padding="8dp"
+            android:text="Entrez le nom de l'enrôlé"
+            android:textColor="#FFFFFF" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/champNomEnrole"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="Nom de l'enrôlé" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        <ImageView
+            android:id="@+id/imageViewPhotosecu"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            android:contentDescription="Photo de la carte" />
+        <TextView
+            android:id="@+id/textInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="8dp"
+            android:text=""
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarExternalSearch"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listRechercheNumsecu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="15sp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/formLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/liste_patient_trouve" />
+
+    <ImageButton
+        android:id="@+id/fabNumSecCapture"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/fab_background"
+        android:contentDescription="Prendre une photo"
+        android:elevation="4dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.FseFiniliastionSoinsAmbulatoire">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Remplacer ConstraintLayout par LinearLayout pour un meilleur défilement -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Layout du titre -->
+            <LinearLayout
+                android:id="@+id/layoutTitrePage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/titrePage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Finalisation de la feuille de soins"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textPhotoFSe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="1. Photo(s) de FSE"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
+
+            <!-- Layout photo -->
+            <LinearLayout
+                android:id="@+id/layoutPhotoFse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:id="@+id/frameCapture"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/imageViewFse1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/border_grey"
+                        android:contentDescription="Feuille de soins"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:id="@+id/cameraIcon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="Icône appareil photo"
+                        android:elevation="4dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_add" />
+
+                    <TextView
+                        android:id="@+id/photoRequiredText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:text="Photo obligatoire *"
+                        android:textColor="#FF0000"
+                        android:textStyle="bold" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Contenu principal -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <!-- Section 2: Choix du professionnel de santé -->
+                <TextView
+                    android:id="@+id/textChoixProfessionnel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="2. Choix du professionnel de santé"
+                    android:textColor="#FFFFFF" />
+
+                <!-- Remplacer le Spinner par AutoCompleteTextView -->
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteProfSante"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Rechercher un professionnel"
+                    android:textSize="14sp"
+                    android:completionThreshold="1"
+                    android:padding="4dp" />
+
+                <!-- Section 3: Informations complémentaires -->
+                <TextView
+                    android:id="@+id/textInfoComplementaires"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="3. Informations complémentaires"
+                    android:textColor="#FFFFFF" />
+
+                <!-- RadioGroup avec des RadioButton -->
+                <RadioGroup
+                    android:id="@+id/radioGroupInfosComplementaires"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioMaternite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maternité" />
+
+                    <RadioButton
+                        android:id="@+id/radioATMP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AT/AP" />
+
+                    <RadioButton
+                        android:id="@+id/radioAVP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AVP" />
+
+                    <RadioButton
+                        android:id="@+id/radioProSpec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Prog special" />
+
+                    <RadioButton
+                        android:id="@+id/radioAucune"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Aucune" />
+
+                </RadioGroup>
+
+
+                <!-- Section 4: Choix des codes d'affections -->
+                <TextView
+                    android:id="@+id/textInfoCodeAffection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="4. Choix des codes d'affections"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Code affection 1"
+                            android:textSize="16sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteAffection1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Rechercher un code"
+                            android:textSize="14sp"
+                            android:completionThreshold="1"
+                            android:padding="4dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Code Affection 2"
+                            android:textSize="16sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/autoCompleteAffection2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Rechercher un code"
+                            android:textSize="14sp"
+                            android:completionThreshold="1"
+                            android:padding="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!-- Section 5: Choix des codes d'actes -->
+                <TextView
+                    android:id="@+id/textInfoActeMedicaux"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="5. Choix des codes d'actes"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textInfoActesPrecedents"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#E0E0E0"
+                    android:padding="8dp"
+                    android:text="Actes précédemment enregistrés"
+                    android:textColor="#000000" />
+
+                <LinearLayout
+                    android:id="@+id/preexistingActesContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="4dp">
+                    <!-- Les actes préexistants seront ajoutés ici dynamiquement -->
+                </LinearLayout>
+
+                <!-- Container pour les lignes d'actes dynamiques -->
+                <LinearLayout
+                    android:id="@+id/acteContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <!-- La première ligne d'acte avec quantité -->
+                    <LinearLayout
+                        android:id="@+id/acteRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="30"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Code acte"
+                                android:textSize="16sp" />
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autoCompleteCodeActe"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@android:drawable/edit_text"
+                                android:hint="Rechercher un code"
+                                android:textSize="14sp"
+                                android:completionThreshold="1"
+                                android:padding="4dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="45"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Designation"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/champDesignation"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@android:drawable/edit_text"
+                                android:hint="Champ designation"
+                                android:padding="2dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="10"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Qté"
+                                android:textSize="16sp" />
+
+                            <EditText
+                                android:id="@+id/quantiteActe"
+                                android:layout_width="match_parent"
+                                android:layout_height="45dp"
+                                android:layout_marginTop="8dp"
+                                android:background="@android:drawable/edit_text"
+                                android:hint="1"
+                                android:inputType="number"
+                                android:text="1"
+                                android:padding="2dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_weight="15"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btnAddActe"
+                                android:layout_width="46dp"
+                                android:layout_height="46dp"
+                                android:layout_marginTop="25dp"
+                                android:background="@drawable/fab_background2"
+                                android:contentDescription="Ajouter un acte"
+                                android:elevation="4dp"
+                                android:src="@android:drawable/ic_input_add" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Les nouvelles lignes seront ajoutées ici dynamiquement -->
+                </LinearLayout>
+
+                <!-- Affichage des montants -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Montant:" />
+
+                    <TextView
+                        android:id="@+id/montant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Part CMU:" />
+
+                    <TextView
+                        android:id="@+id/cmupart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Part Assuré:" />
+
+                    <TextView
+                        android:id="@+id/assurepart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp">
+
+                    <ListView
+                        android:id="@+id/listPrestation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@android:color/transparent"
+                        android:dividerHeight="15sp"
+                        android:scrollbars="vertical"
+                        android:visibility="gone"
+                        tools:listitem="@layout/liste_acte_prestation" />
+                </LinearLayout>
+
+                <!-- Bouton d'enregistrement et ProgressBar -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="80dp"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnEnregistrerFseFinalisee"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/button_background"
+                        android:text="Enregistrer" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

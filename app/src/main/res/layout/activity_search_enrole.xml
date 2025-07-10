@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- names -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Nom"
+                />
+            <EditText
+                android:id="@+id/last_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nom"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Prénoms"
+                />
+            <EditText
+                android:id="@+id/first_name_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:hint="Prénoms"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- birthday -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de naissance"
+            android:textSize="12sp" />
+        <EditText
+            android:id="@+id/birthday_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:inputType="date"
+            android:hint="JJ/MM/AAAA"
+            android:importantForAccessibility="yes" />
+
+    </LinearLayout>
+
+    <!-- filter -->
+    <LinearLayout
+        android:id="@+id/filter_box"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Téléphone"
+                android:textSize="12sp"
+                />
+            <EditText
+                android:id="@+id/phone_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Téléphone"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lieu de naissance"
+                android:textSize="12sp"
+                />
+            <EditText
+                android:id="@+id/birth_place_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lieu de naissance"
+                android:textSize="12sp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/externalSearchSpinner"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" />
+
+    <!-- before action -->
+    <RelativeLayout
+        android:id="@+id/before_action_section"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/loadingSearchEnrole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/loadinganimation"
+            android:visibility="invisible"></ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entrez le nom pour démarrer la recherche"
+            android:layout_centerInParent="true"
+            android:textSize="12sp"
+            />
+
+        ∑<ImageView
+            android:id="@+id/imageViewPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/loadinganimation"
+            android:visibility="invisible"></ImageView>
+
+        <ImageButton
+            android:id="@+id/fabCapture"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/fab_background"
+            android:contentDescription="Prendre une photo"
+            android:elevation="4dp"
+            android:src="@android:drawable/ic_menu_camera" />
+    </RelativeLayout>
+
+    <!-- result -->
+    <ListView
+        android:id="@+id/result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:listitem="@layout/liste_patient_trouve"
+        android:dividerHeight="8dp"
+        android:layout_marginTop="16dp"
+        />
+    <!-- no result -->
+    <RelativeLayout
+        android:id="@+id/no_patient_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aucun patient trouvé"
+                android:textAlignment="center" />
+            <Button
+                android:id="@+id/new_enrolement_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nouvel enrôlement" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

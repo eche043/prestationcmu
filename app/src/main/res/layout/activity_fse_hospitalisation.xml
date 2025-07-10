@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainFH"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.FseEditActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2FH"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="1dp">
+
+            <Button
+                android:id="@+id/retourHomeFH"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="&lt;"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/titrePageFH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="Edition une Feuille de soins"
+                android:textSize="18sp"
+                android:textStyle="bold"
+
+                app:layout_constraintStart_toEndOf="@id/retourHomeFH"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintTop_toBottomOf="@id/titrePageFH">
+
+                <TextView
+                    android:id="@+id/textIdentFseSoinsFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="IDENTIFICATION DE LA FEUILLE DE SOINS"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textNumeroFH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:text="N° de transaction"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champTransactionFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/edit_text"
+                    android:textSize="12dp"
+                    android:hint="Entrez le numéro de transaction"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/textIdentAssureFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="IDENTIFICATION DE L'ASSURE"
+                    android:textColor="#FFFFFF" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="N° de sécurité sociale"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champNumSecuFH"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le numero de securité social"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GUID"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champGuidFH"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le guid"
+                            android:padding="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nom complet"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champNomCompletFH"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@android:drawable/edit_text"
+                            android:textSize="12dp"
+                            android:hint="Entrez le nom complet"
+                            android:padding="8dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date de naissance"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champDateNaissFH"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez la date de naissance"
+                            android:padding="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Sexe"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/champSexeFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:drawable/btn_dropdown" />
+
+                <TextView
+                    android:id="@+id/textStatutEtablissementFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="#08a1e1"
+                    android:padding="8dp"
+                    android:text="STATUT DE L'ETABLISSEMENT D'ACCUEIL"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/textNomEtablissementFH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Nom etablissement"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champNomEtablissementFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@android:drawable/edit_text"
+                    android:textSize="12dp"
+                    android:hint="Entrez le nom de l'etablissement"
+                    android:padding="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkboxCMRFH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CMR" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkboxEloignementFH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eloignement" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkboxUrgentFH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Urgent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/checkboxAutreFH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Autre" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/checkboxReferenceFH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Référence" />
+
+                <EditText
+                    android:id="@+id/champAutreFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@android:drawable/edit_text"
+                    android:hint=""
+                    android:padding="8dp"
+                    android:visibility="gone" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Code Affection"
+                            android:textSize="14sp" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/champCodeAff"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12sp"
+                            android:background="@android:drawable/btn_dropdown"
+                            android:inputType="text"
+                            android:imeOptions="actionDone"
+
+                            android:textSelectHandle="@android:color/transparent"
+                            android:textSelectHandleLeft="@android:color/transparent"
+                            android:textSelectHandleRight="@android:color/transparent"
+
+                           android:dropDownWidth="wrap_content"
+                            android:dropDownHeight="wrap_content"
+                            android:hint="Sélectionnez ou tapez"
+                            android:clickable="true"
+                            android:completionThreshold="1"
+                             />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Nombre de jour"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/champNbJour"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12dp"
+                            android:inputType="number"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Entrez le nombre de jour"
+                            android:padding="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Motif"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/champMotifFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top|start"
+                    android:minLines="3"
+                    android:maxLines="6"
+                    android:scrollbars="vertical"
+                    android:background="@android:drawable/edit_text"
+                    android:hint="Entrez le Motif"
+                    android:padding="8dp" />
+
+
+                <TextView
+                    android:id="@+id/textInfoFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="#e7000b"
+                    android:padding="8dp"
+                    android:text="Vous devrez finaliser la FSE après la prise en charge de l'assuré"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/enregistrerFicheFH"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Generer une feuille de soins"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

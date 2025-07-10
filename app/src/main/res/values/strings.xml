@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Prestations CMU LIGHT</string>
+    <integer name="nbreLine">4</integer>
+    <string-array name="all_permissions">
+        <item>android.permission.WRITE_EXTERNAL_STORAGE</item>
+        <item>android.permission.CAMERA</item>
+        <item>android.permission.READ_EXTERNAL_STORAGE</item>
+        <!--        <item>android.permission.ACCESS_COARSE_LOCATION</item>-->
+        <item>android.permission.ACCESS_FINE_LOCATION</item>
+    </string-array>
+    <string name="title_activity_accueil">AccueilActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="scan_title">Scanner des feuilles de soins</string>
+    <string name="preview_title">Vérification</string>
+    <string name="btn_new_capture">Nouvelle capture</string>
+    <string name="btn_send">Envoyer</string>
+    <string name="success_title">Succès!</string>
+    <string name="success_message">Feuille de soin envoyée avec succès</string>
+    <string name="btn_ok">OK</string>
+    <string name="fab_description">Prendre une photo</string>
+    <string name="check_icon_description">Icône de validation</string>
+    <string name="camera_permission_denied">Permission de caméra refusée</string>
+    <string name="preview_description">Aperçu de l\'image</string>
+    <string name="success_icon_description">Icône de succès</string>
+    <string name="error_network">Erreur réseau</string>
+    <string name="error_upload">Erreur lors de l\'envoi</string>
+    <string name="crop_title">Recadrer l\'image</string>
+    <string name="crop_image">RECADRER</string>
+    <string name="app_title">Scanner Documents Médicaux</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="success_message_queue">Feuille de soin enrégistrée avec succès!</string>
+    <string name="touslesmodes"><![CDATA[Tous les modes (connecté & non-connecté)]]></string>
+    <string name="error_nom_requis">Veuillez saisir le nom</string>
+    <string name="error_prenom_requis">Veuillez saisir le prénom</string>
+    <string name="error_date_naissance_requise">Veuillez saisir la date de naissance</string>
+    <string name="error_centre_sante_requis">Veuillez sélectionner un centre de santé</string>
+    <string name="error_photo_requise">Veuillez prendre une photo</string>
+    <string name="error_empreintes_requises">Veuillez capturer les empreintes de tous les doigts</string>
+    <string name="tous_doigts_captures">Tous les doigts ont été capturés</string>
+    <string name="permission_camera_refusee">Permission de caméra refusée</string>
+    <string name="inscription_reussie">Inscription réussie</string>
+    <string name="doigt_capture">Doigt %1$d capturé. Continuez.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enrollment_subtitle">Enrolement subtitle</string>
+    <string name="enroll_classic">Enrolement classic</string>
+    <string name="enroll_specific_finger">Enrolement specifisue 1 doigt</string>
+    <string name="verify">Vérifier</string>
+    <string name="verification_subtitle">Vérifier subtitle</string>
+    <string name="new_finger_enrolled">Nouveau doigt</string>
+    <string name="finger_matched">Correspondance trouvée</string>
+</resources>

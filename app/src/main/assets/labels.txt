@@ -1,0 +1,2 @@
+0 feuilleExp
+1 mauvais

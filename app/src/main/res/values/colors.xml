@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#00A5EA</color>
+
+        <color name="colorPrimary">@color/dark_blue</color>
+        <color name="colorPrimaryDark">@color/deep_dark_blue</color>
+        <color name="colorAccent">@color/bright_orange</color>
+
+    <color name="card_border_green">#4CAF50</color>
+    <color name="card_border_normal">#FFFFFF</color>
+        <color name="btnFlutter">#EFF6F8</color>
+        <color name="green">#1d9c20</color>
+        <color name="dark_gray">#434543</color>
+        <color name="gray">#828282</color>
+        <color name="light_gray">#dcd7d7</color>
+        <color name="red">#ff0000</color>
+        <color name="light_red">#e44848</color>
+        <color name="confirmation_buttons">#20a1ec</color>
+        <color name="gold_color">#A58A4F</color>
+        <color name="hint_text_color">#808080</color>
+        <color name="rejectedRed">#c62828</color>
+        <color name="acceptedGreen">#2e7d32</color>
+        <color name="yellow">#FFC107</color>
+        <color name="black_overlay">#66000000</color>
+        <color name="test">#64646464</color>
+
+    <color name="orange">#FFA500</color>
+        <!-- T5 brand colors-->
+        <color name="bright_orange">#E74124</color>
+        <color name="dark_orange">#44a62d</color>
+        <color name="dark_blue">#F4FCFF</color>
+        <color name="deep_dark_blue">#0d1a26</color>
+        <color name="pantone_1505">#Ec671A</color>
+        <color name="light_blue_600">#FF039BE5</color>
+        <color name="light_blue_900">#FF01579B</color>
+        <color name="light_blue_A200">#FF40C4FF</color>
+        <color name="light_blue_A400">#FF00B0FF</color>
+        <!-- T5 brand colors-->
+
+
+
+        <color name="primary_blue">#00A4EA</color>
+        <color name="secodanry_orange">#EE7E02</color>
+        <color name="tertiary_green">#41A62A</color>
+        <color name="tertiary_greylight">#D1D5DB</color>
+        <color name="tertiary_greybold">#9CA3AF</color>
+
+    <color name="light_smoke">#f9f7f7</color>
+
+
+    <color name="colorSuccess">#4CAF50</color>
+    <color name="colorError">#F44336</color>
+
+    <color name="colorGreen">#4CAF50</color>
+    <color name="colorBlue">#2196F3</color>
+    <color name="colorOrange">#FF9800</color>
+</resources>

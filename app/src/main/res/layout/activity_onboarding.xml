@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_onboarding_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF87CEEB"
+    tools:context=".views.OnboardingActivity">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/logoprestacmu"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Bienvenue sur l'application de Prestations CMU"
+        android:textColor="#0F4D8C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Avant de démarrer, vous devez:"
+        android:textColor="#0F4D8C"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Étape 1 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepContainer1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivStep1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStep1"
+            app:layout_constraintBottom_toBottomOf="@id/tvStep1"
+            app:tint="#ece8eb"/>
+
+        <TextView
+            android:id="@+id/tvStep1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Choisir votre centre de santé"
+            android:textColor="#ece8eb"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivStep1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Étape 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepContainer2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@id/stepContainer1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivStep2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStep2"
+            app:layout_constraintBottom_toBottomOf="@id/tvStep2"
+            app:tint="#ece8eb"/>
+
+        <TextView
+            android:id="@+id/tvStep2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Enregistrer vos informations (nom, prénom, photo, empreintes digitales)"
+            android:textColor="#ece8eb"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivStep2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Étape 3 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepContainer3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:visibility="invisible"
+        android:alpha="0"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@id/stepContainer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/ivStep3"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_building"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvStep3"
+            app:layout_constraintBottom_toBottomOf="@id/tvStep3"
+            app:tint="#ece8eb"/>
+
+        <TextView
+            android:id="@+id/tvStep3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Prendre les photos du centre de santé"
+            android:textColor="#ece8eb"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivStep3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnUnderstand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J'ai compris "
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:visibility="invisible"
+        android:alpha="0"
+        android:padding="15dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_background2"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+    android:drawablePadding="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

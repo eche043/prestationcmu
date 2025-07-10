@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Bouton retour et titre -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_menu_revert"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edition de la FSE"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Section : IDENTIFICATION DE LA FEUILLE DE SOINS -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IDENTIFICATION DE LA FEUILLE DE SOINS"
+            android:background="#0089FF"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="N° de transaction"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4344-IGW1-351"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp"
+            android:enabled="false"/>
+
+        <!-- Section : IDENTIFICATION DE L'ASSURÉ -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IDENTIFICATION DE L'ASSURÉ"
+            android:background="#0089FF"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="N° de sécurité sociale"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="630905831"
+                    android:background="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GUID"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2296bd72-6ff9-4eb5-98"
+                    android:background="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:enabled="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nom complet"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SEHI BI MIGONE SERGE"
+                    android:background="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:enabled="false"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date de naissance"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23/12/96"
+                    android:background="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:enabled="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Section : STATUT DE L'ETABLISSEMENT D'ACCUEIL -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="STATUT DE L'ETABLISSEMENT D'ACCUEIL"
+            android:background="#0089FF"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom de l'établissement"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SSSU-SAJ CROU DE L'UNIVERSITÉ PELEFORO GON"
+            android:background="@android:color/darker_gray"
+            android:padding="8dp"
+            android:enabled="false"/>
+
+        <!-- Message d'alerte -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vous devrez finaliser la FSE après la prise en charge de l'assuré."
+            android:textColor="@android:color/holo_red_dark"
+            android:background="@android:color/white"
+            android:padding="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+</ScrollView>
